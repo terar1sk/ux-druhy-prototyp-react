@@ -1,0 +1,142 @@
+/* ============================================
+   === FOOTER ===
+   ============================================ */
+
+/* --- base layout --- */
+.site-footer{
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    padding: 2rem 0;
+}
+
+.footer-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 180px 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* --- logo + socials --- */
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.footer-logo{
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-socials{
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-icon{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.social-icon:hover{
+    background: #f2f2f2;
+    border-color: #000;
+}
+
+/* --- footer columns --- */
+.footer-col h4{
+    margin: 0 0 0.7rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer-col p,
+.footer-col a{
+    margin: 0.3rem 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-col a:hover{
+    text-decoration: underline;
+}
+
+
+/* ============================================
+   === MOBILE ===
+   ============================================ */
+
+/* --- tablet --- */
+@media (max-width: 900px){
+    .footer-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* --- mobile --- */
+@media (max-width: 600px){
+    .footer-wrapper{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footer-brand{
+        align-items: flex-start;
+    }
+}
+
+
+/* ============================================
+   === DARK THEME ===
+   ============================================ */
+
+/* --- footer colors --- */
+[data-theme="dark"] .site-footer{
+    background: #1a1a1a;
+    border-top-color: #333333;
+    color: #f5f5f5;
+}
+
+[data-theme="dark"] .footer-col h4{
+    color: #ffffff;
+}
+
+[data-theme="dark"] .footer-col p,
+[data-theme="dark"] .footer-col a{
+    color: #cccccc;
+}
+
+[data-theme="dark"] .footer-col a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- socials in dark theme --- */
+[data-theme="dark"] .social-icon{
+    color: #ffffff;
+    border-color: rgba(255,255,255,0.15);
+    background: #2a2a2a;
+}
+
+[data-theme="dark"] .social-icon:hover{
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+/* --- logo adjustments (optional) --- */
+[data-theme="dark"] .footer-logo{
+    filter: none !important;
+}

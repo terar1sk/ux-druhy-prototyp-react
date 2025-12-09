@@ -1,0 +1,339 @@
+/* ============================================
+   === ACCOUNT PAGE ===
+   ============================================ */
+
+/* layout */
+.account-page{
+    background: #f4f4f4;
+    min-height: calc(100vh - 160px);
+    padding: 5rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header */
+.account-hero{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.account-title{
+    font-size: clamp(2rem,3vw,2.4rem);
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.4rem;
+}
+
+.account-subtitle{
+    font-size: 0.98rem;
+    color: #666;
+}
+
+/* main layout */
+.account-layout{
+    width: 100%;
+    max-width: 1040px;
+    display: grid;
+    grid-template-columns: 280px minmax(0,1fr);
+    gap: 1.5rem;
+}
+
+
+/* ============================================
+   === SIDEBAR (PROFILE) ===
+   ============================================ */
+
+.account-sidebar{
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    padding: 1.5rem 1.6rem;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+/* avatar and basic data */
+.account-avatar{
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.account-name{
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.account-email{
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* labels and pills */
+.account-info-label{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #9ca3af;
+}
+
+.account-pill{
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background: #f3f4f6;
+    font-size: 0.8rem;
+    color: #111827;
+}
+
+/* sidebar actions */
+.account-actions{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.account-btn{
+    width: 100%;
+    padding: 0.55rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid #d4d4d4;
+    background: #f9fafb;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.account-btn--danger{
+    border-color: #f97373;
+    color: #b91c1c;
+}
+
+.account-btn:hover{
+    background: #111;
+    color: #fff;
+    border-color: #111;
+    transform: translateY(-1px);
+}
+
+.account-btn--danger:hover{
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+
+/* ============================================
+   === MAIN CONTENT (RESERVATIONS + SETTINGS) ===
+   ============================================ */
+
+.account-main{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.account-section{
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    padding: 1.5rem 1.6rem;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.05);
+}
+
+.account-section-title{
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.7rem;
+}
+
+.account-section-subtitle{
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+/* reservations list */
+.reservation-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.reservation-card{
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    padding: 0.75rem 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.reservation-main{
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.reservation-type{
+    font-weight: 600;
+    color: #111827;
+}
+
+.reservation-meta{
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.reservation-tag{
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background: #ecfdf5;
+    color: #166534;
+    font-size: 0.8rem;
+}
+
+/* settings list */
+.settings-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+
+/* ============================================
+   === MOBILE ===
+   ============================================ */
+
+@media (max-width: 900px){
+    .account-layout{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ============================================
+   === DARK THEME ===
+   ============================================ */
+
+/* page background */
+[data-theme="dark"] .account-page{
+    background: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* headings */
+[data-theme="dark"] .account-title{
+    color: #ffffff;
+}
+
+[data-theme="dark"] .account-subtitle{
+    color: #cccccc;
+}
+
+/* sidebar */
+[data-theme="dark"] .account-sidebar{
+    background: #222;
+    border-color: #333;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.65);
+}
+
+[data-theme="dark"] .account-avatar{
+    background: #ffffff;
+    color: #111;
+}
+
+[data-theme="dark"] .account-name{
+    color: #ffffff;
+}
+
+[data-theme="dark"] .account-email{
+    color: #bbbbbb;
+}
+
+[data-theme="dark"] .account-info-label{
+    color: #8d8d8d;
+}
+
+[data-theme="dark"] .account-pill{
+    background: #333;
+    color: #e6e6e6;
+}
+
+/* buttons */
+[data-theme="dark"] .account-btn{
+    background: #2b2b2b;
+    border-color: #444;
+    color: #e5e5e5;
+}
+
+[data-theme="dark"] .account-btn:hover{
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #111;
+}
+
+[data-theme="dark"] .account-btn--danger{
+    border-color: #ff8a8a;
+    color: #ffb3b3;
+}
+
+[data-theme="dark"] .account-btn--danger:hover{
+    background: #b91c1c;
+    border-color: #b91c1c;
+    color: #fff;
+}
+
+/* main sections */
+[data-theme="dark"] .account-section{
+    background: #222;
+    border-color: #333;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.65);
+}
+
+[data-theme="dark"] .account-section-title{
+    color: #ffffff;
+}
+
+[data-theme="dark"] .account-section-subtitle{
+    color: #c9c9c9;
+}
+
+/* reservations */
+[data-theme="dark"] .reservation-card{
+    background: #262626;
+    border-color: #3a3a3a;
+}
+
+[data-theme="dark"] .reservation-type{
+    color: #f5f5f5;
+}
+
+[data-theme="dark"] .reservation-meta{
+    color: #bbbbbb;
+}
+
+[data-theme="dark"] .reservation-tag{
+    background: #0f3d2e;
+    color: #4ade80;
+}
+
+/* settings */
+[data-theme="dark"] .settings-list{
+    color: #cccccc;
+}

@@ -1,0 +1,101 @@
+/* ============================================
+   === THEME VARIABLES ===
+   ============================================ */
+
+/* light theme (default) */
+:root{
+    --bg-main: #ffffff;
+    --bg-section: #f5f5f5;
+
+    --text-main: #111111;
+    --text-muted: #555555;
+
+    --card-bg: #ffffff;
+    --card-border: #e5e5e5;
+
+    --nav-bg: #ffffff;
+    --nav-link: #888888;
+    --nav-link-active: #000000;
+
+    --btn-bg: #2c2c2c;
+    --btn-text: #ffffff;
+}
+
+/* dark theme */
+[data-theme="dark"]{
+    --bg-main: #1a1a1a;
+    --bg-section: #161b22;
+
+    --text-main: #e6edf3;
+    --text-muted: #7d8590;
+
+    --card-bg: #161b22;
+    --card-border: #30363d;
+
+    --nav-bg: #0d1117;
+    --nav-link: #9ba3b4;
+    --nav-link-active: #ffffff;
+
+    --btn-bg: #ffffff;
+    --btn-text: #0d1117;
+}
+
+
+/* ============================================
+   === BASE SETTINGS ===
+   ============================================ */
+
+html{
+    font-size: 16px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    color: var(--text-main);
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-main);
+    color: var(--text-main);
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+img,
+svg{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ============================================
+   === SHARED COMPONENTS ===
+   ============================================ */
+
+/* generic sections with background */
+.section,
+.page-section{
+    background: var(--bg-section);
+    color: var(--text-main);
+}
+
+/* account / pricing / reservation cards (placeholder for shared styles) */
+.account-section,
+.account-sidebar{
+    /* shared card styles can go here if needed */
+}
+
+/* highlighted titles */
+.pricing-title,
+.section-title,
+.account-title{
+    color: var(--text-main);
+}
+
+/* secondary text */
+.text-muted,
+.section-subtitle,
+.account-subtitle,
+.pricing-subtitle,
+.faq-subtitle{
+    color: var(--text-muted);
+}

@@ -1,0 +1,380 @@
+/* ============================================
+   === PAY PAGE (platba) ===
+   ============================================ */
+
+/* layout */
+.pay-page{
+    background: #f4f4f4;
+    min-height: calc(100vh - 160px);
+    padding: 4rem 1.5rem 4rem;
+}
+
+.pay-header{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.pay-title{
+    font-size: clamp(2.2rem,3.2vw,2.7rem);
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    color: #1a1a1a;
+}
+
+.pay-subtitle{
+    color: #666;
+    font-size: 0.98rem;
+}
+
+/* main layout grid */
+.pay-layout{
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1.1fr);
+    gap: 1.5rem;
+}
+
+/* cards */
+.pay-card{
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+    padding: 1.75rem 2rem;
+}
+
+.pay-block-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* rows and totals */
+.pay-row{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.pay-row span:first-child{
+    color: #555;
+}
+
+.pay-tickets{
+    margin: 1rem 0;
+    padding-top: 0.4rem;
+    border-top: 1px solid #eee;
+}
+
+.pay-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.8rem;
+    font-weight: 600;
+}
+
+.pay-total-amount{
+    font-size: 1.2rem;
+}
+
+
+/* ============================================
+   === PAYMENT METHODS ===
+   ============================================ */
+
+/* methods list */
+.pay-methods{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+/* single method card */
+.pay-method{
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    transition: 0.2s;
+}
+
+.pay-method input{
+    margin-top: 3px;
+}
+
+.pay-method-body{
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.pay-method-label{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pay-method-desc{
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.pay-method--active{
+    border-color: #111;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(15,23,42,0.07);
+}
+
+/* selected method details */
+.pay-method-details{
+    margin-bottom: 1.4rem;
+}
+
+.pay-method-details h3{
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+.pay-note{
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+/* ============================================
+   === FORM FIELDS ===
+   ============================================ */
+
+.pay-form label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.9rem;
+}
+
+.pay-form input,
+.pay-form select{
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: #fafafa;
+    outline: none;
+    transition: 0.2s;
+}
+
+.pay-form input:focus,
+.pay-form select:focus{
+    background: #fff;
+    border-color: #111;
+    box-shadow: 0 0 0 1px #11111110;
+}
+
+/* inline form rows */
+.pay-row-inline{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.pay-row-inline label{
+    flex: 1;
+}
+
+/* contact block */
+.pay-user-block{
+    margin-top: 1rem;
+}
+
+.pay-user-block h3{
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+
+/* ============================================
+   === BUTTONS ===
+   ============================================ */
+
+/* main submit */
+.pay-submit{
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    background: #111;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.pay-submit:hover{
+    background: #000;
+    transform: translateY(-1px);
+}
+
+/* back link */
+.pay-back-link{
+    margin-top: 0.6rem;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 0.85rem;
+    color: #555;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* fallback button */
+.pay-back{
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* ============================================
+   === MOBILE ===
+   ============================================ */
+
+@media (max-width: 800px){
+    .pay-layout{
+        grid-template-columns: 1fr;
+    }
+
+    .pay-card{
+        padding: 1.5rem 1.4rem;
+    }
+
+    .pay-row-inline{
+        flex-direction: column;
+    }
+}
+
+
+/* ============================================
+   === DARK THEME ===
+   ============================================ */
+
+/* page */
+[data-theme="dark"] .pay-page{
+    background: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* headings */
+[data-theme="dark"] .pay-title{
+    color: #ffffff;
+}
+
+[data-theme="dark"] .pay-subtitle{
+    color: #cccccc;
+}
+
+/* cards */
+[data-theme="dark"] .pay-card{
+    background: #222;
+    border-color: #333;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* rows and totals */
+[data-theme="dark"] .pay-row span:first-child{
+    color: #bbbbbb;
+}
+
+[data-theme="dark"] .pay-total-amount{
+    color: #ffffff;
+}
+
+/* payment methods */
+[data-theme="dark"] .pay-method{
+    background: #262626;
+    border-color: #3a3a3a;
+}
+
+[data-theme="dark"] .pay-method-label{
+    color: #f5f5f5;
+}
+
+[data-theme="dark"] .pay-method-desc{
+    color: #aaaaaa;
+}
+
+[data-theme="dark"] .pay-method--active{
+    background: #000;
+    border-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.8);
+}
+
+/* method details */
+[data-theme="dark"] .pay-method-details h3{
+    color: #ffffff;
+}
+
+[data-theme="dark"] .pay-note{
+    color: #c4c4c4;
+}
+
+/* form */
+[data-theme="dark"] .pay-form label{
+    color: #e5e5e5;
+}
+
+[data-theme="dark"] .pay-form input,
+[data-theme="dark"] .pay-form select{
+    background: #262626;
+    border-color: #3a3a3a;
+    color: #f5f5f5;
+}
+
+[data-theme="dark"] .pay-form input::placeholder,
+[data-theme="dark"] .pay-form select::placeholder{
+    color: #888888;
+}
+
+[data-theme="dark"] .pay-form input:focus,
+[data-theme="dark"] .pay-form select:focus{
+    background: #1d1d1d;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 1px #ffffff33;
+}
+
+/* contact block */
+[data-theme="dark"] .pay-user-block h3{
+    color: #ffffff;
+}
+
+/* buttons */
+[data-theme="dark"] .pay-submit,
+[data-theme="dark"] .pay-back{
+    background: #ffffff;
+    color: #111111;
+}
+
+[data-theme="dark"] .pay-submit:hover,
+[data-theme="dark"] .pay-back:hover{
+    background: #e5e5e5;
+    color: #000000;
+}
+
+[data-theme="dark"] .pay-back-link{
+    color: #dddddd;
+}

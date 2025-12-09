@@ -1,0 +1,199 @@
+/* ============================================
+   === CONTACT PAGE (kontakt) ===
+   ============================================ */
+
+/* layout */
+.contact-page{
+    background: #f4f4f4;
+    min-height: calc(100vh - 160px);
+    padding: 5rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* hero */
+.contact-hero{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.contact-title{
+    font-size: clamp(2.4rem,4vw,3rem);
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+}
+
+.contact-subtitle{
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* form card */
+.contact-card{
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    max-width: 360px;
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+    box-sizing: border-box;
+}
+
+.contact-card *{
+    box-sizing: border-box;
+}
+
+/* form */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* fields */
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.field label{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.field input,
+.field textarea{
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #333;
+    background: #fafafa;
+    transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder{
+    color: #b5b5b5;
+}
+
+.field input:focus,
+.field textarea:focus{
+    outline: none;
+    border-color: #111;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #11111110;
+}
+
+/* primary button */
+.contact-btn{
+    margin-top: 0.4rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background: #111111;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.contact-btn:hover{
+    background: #000000;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+
+/* ============================================
+   === MOBILE ===
+   ============================================ */
+
+/* contact mobile */
+@media (max-width: 768px){
+    .contact-page{
+        padding-top: 3.5rem;
+    }
+
+    .contact-card{
+        padding-inline: 1.5rem;
+        padding-block: 1.8rem;
+    }
+}
+
+
+/* ============================================
+   === DARK THEME ===
+   ============================================ */
+
+/* page background */
+[data-theme="dark"] .contact-page{
+    background: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* headings */
+[data-theme="dark"] .contact-title{
+    color: #ffffff;
+}
+
+[data-theme="dark"] .contact-subtitle{
+    color: #cccccc;
+}
+
+/* form card */
+[data-theme="dark"] .contact-card{
+    background: #242424;
+    border-color: #333333;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.55);
+}
+
+/* field labels */
+[data-theme="dark"] .field label{
+    color: #e5e5e5;
+}
+
+/* inputs and textarea */
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field textarea{
+    background: #111111;
+    border-color: #333333;
+    color: #f5f5f5;
+}
+
+[data-theme="dark"] .field input::placeholder,
+[data-theme="dark"] .field textarea::placeholder{
+    color: #777777;
+}
+
+[data-theme="dark"] .field input:focus,
+[data-theme="dark"] .field textarea:focus{
+    background: #151515;
+    border-color: #f5f5f5;
+    box-shadow: 0 0 0 1px rgba(245,245,245,0.15);
+}
+
+/* button */
+[data-theme="dark"] .contact-btn{
+    background: #ffffff;
+    color: #111111;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .contact-btn:hover{
+    background: #e5e5e5;
+    color: #000000;
+}

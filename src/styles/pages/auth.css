@@ -1,0 +1,214 @@
+/* ============================================
+   === AUTH PAGES (login + register) ===
+   ============================================ */
+
+/* auth layout */
+.auth-page{
+    background: #f4f4f4;
+    min-height: calc(100vh - 160px);
+    padding: 5rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* hero */
+.auth-hero{
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.auth-title{
+    font-size: clamp(2rem,3.2vw,2.4rem);
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.4rem;
+}
+
+.auth-subtitle{
+    font-size: 0.98rem;
+    color: #666;
+}
+
+/* card */
+.auth-card{
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    padding: 2rem 2.2rem;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+    box-sizing: border-box;
+}
+
+.auth-card *{
+    box-sizing: border-box;
+}
+
+/* form and fields */
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.auth-field label{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.auth-field input{
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #333;
+    background: #fafafa;
+    transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.auth-field input::placeholder{
+    color: #b5b5b5;
+}
+
+.auth-field input:focus{
+    outline: none;
+    border-color: #111;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px #11111110;
+}
+
+/* checkbox */
+.auth-checkbox{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.auth-checkbox input{
+    margin-top: 0.15rem;
+}
+
+/* primary button */
+.auth-btn{
+    margin-top: 0.2rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background: #111111;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.auth-btn:hover{
+    background: #000000;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* switch link below form */
+.auth-switch{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-switch a{
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-switch a:hover{
+    text-decoration: underline;
+}
+
+
+/* ============================================
+   === MOBILE ===
+   ============================================ */
+
+/* auth pages mobile */
+@media (max-width: 768px){
+    .auth-page{
+        padding-top: 3.5rem;
+    }
+
+    .auth-card{
+        padding: 1.8rem 1.5rem;
+    }
+}
+
+
+/* ============================================
+   === DARK THEME ===
+   ============================================ */
+
+/* auth base */
+[data-theme="dark"] .auth-page{
+    background: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* hero */
+[data-theme="dark"] .auth-hero{
+    color: #f5f5f5;
+}
+
+[data-theme="dark"] .auth-title{
+    color: #ffffff;
+}
+
+[data-theme="dark"] .auth-subtitle{
+    color: #cccccc;
+}
+
+/* card */
+[data-theme="dark"] .auth-card{
+    background: #242424;
+    border: 1px solid #333333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+}
+
+/* fields */
+[data-theme="dark"] .auth-field label{
+    color: #f5f5f5;
+}
+
+[data-theme="dark"] .auth-field input{
+    background: #1a1a1a;
+    color: #f5f5f5;
+    border-color: #333333;
+}
+
+[data-theme="dark"] .auth-field input::placeholder{
+    color: #888888;
+}
+
+/* button */
+[data-theme="dark"] .auth-btn{
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+/* extra auth link */
+[data-theme="dark"] .auth-link{
+    color: #d0d0d0;
+}
