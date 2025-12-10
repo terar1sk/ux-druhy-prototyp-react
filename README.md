@@ -72,8 +72,8 @@ Builds the app for production into the `build` folder.
 
 ## 🔗 Related Links
 
-- UX process and testing: FigJam board (link will be added)
-- Prototype demo video (max 3 minutes): link will be added
+- UX process (FigJam board): https://www.figma.com/board/A1sTpOO3z1JC4bzNhlnzVl/UX3-Isai-Dmytro?t=n3Uz0ttXeAs5DG94-1
+- Prototype demo video (max 3 minutes): https://youtu.be/68hAVhncmh4
 
 ---
 
